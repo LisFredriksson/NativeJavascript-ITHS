@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="disciption" content="Nybakta kakor och bröd varje dag" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Kakfabriken</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <!--navbar logo-->
+      <div>
+        <img src="Bilder/logo2.png" alt="logo" />
+      </div>
+      <!--Mobile menu-->
+      <a href="#" class="toggle-button">
+        <span class="mobileBar"></span>
+        <span class="mobileBar"></span>
+        <span class="mobileBar"></span>
+        <span class="mobileBar"></span>
+      </a>
+      <!--nav links desktop-->
+      <div class="nav-links">
+        <ul>
+          <li><a href="https://goo.gl/maps/36oUQeB5XQgJnvJ98">Hitta hit</a></li>
+          <li><a href="#img-sec">Sortiment</a></li>
+          <li><a href="index2.html">Mer om oss</a></li>
+          <li><a href="index.html">Hem</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!--Hero section-->
+    <section class="hero-image">
+      <div class="hero-text">
+        <img id="hero-logo" src="bilder/logo1.png" alt="logo" />
+        <h1>NYGRÄDDADE KAKOR VARJE DAG</h1>
+        <a href="https://goo.gl/maps/36oUQeB5XQgJnvJ98">UPPSALA</a>
+        /
+        <a href="https://goo.gl/maps/eVqsve23ikZx8xzK8">STOCKHOLM</a>
+      </div>
+    </section>
+    <!--img section-->
+    <main class="img-section" id="img-sec">
+      <div class="lesspictures"></div>
+      <div class="morepictures" style="display: none;"></div>
+      <div class="buttondiv">
+        <button class="mybutton">Visa mer</button>
+      </div>
+    </main>
+    <!--slideshow section-->
+    <section class="slideshowsection">
+      <h1>Kakfabriken</h1>
+      <h2>- Fika från morgon till kväll -</h2>
+      <div id="slideshow">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <div class="slidefade" id="slideshowdivone"></div>
+        <div class="slidefade" id="slideshowdivtwo"></div>
+        <div class="slidefade" id="slidesowdivthree"></div>
+        <div class="slidefade" id="slideshowdivfour"></div>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </section>
+    <!--footer-->
+    <footer class="footer">
+      <div class="footer-div">
+        <div id="footer-contact">
+          <p>
+            UPPSALA <br />
+            ymergatan 13B, 753 25 Uppsala<br />
+            Kakfabriken.uppsala@info.com <br />
+            070-4719664
+          </p>
+          <p>
+            STOCKHOLM <br />
+            annangata 13B, 111 22 Stockholm<br />
+            Kakfabriken.stockholm@info.com <br />
+            070-4719664
+          </p>
+        </div>
+        <div id="footer-logo">
+          <img src="bilder/logo1.png" alt="logo" />
+        </div>
+      </div>
+      <div id="all-rights">
+        <p>
+          ©Kakfabriken 2022. All Rights Reserved. Site design by @lisfredriksson
+        </p>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

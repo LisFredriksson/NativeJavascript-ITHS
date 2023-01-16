@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Kakfabriken - Mer om oss</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <!--navbar logo-->
+      <div>
+        <img src="Bilder/logo2.png" alt="logo" />
+      </div>
+      <!--Mobile menu-->
+      <a href="#" class="toggle-button">
+        <span class="mobileBar"></span>
+        <span class="mobileBar"></span>
+        <span class="mobileBar"></span>
+        <span class="mobileBar"></span>
+      </a>
+      <!--nav links desktop-->
+      <div class="nav-links">
+        <ul>
+          <li><a href="https://goo.gl/maps/36oUQeB5XQgJnvJ98">Hitta hit</a></li>
+          <li><a href="index.html#img-sec">Sortiment</a></li>
+          <li><a href="index2.html">Mer om oss</a></li>
+          <li><a href="index.html">Hem</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!--Main Section-->
+    <main class="gridarea">
+      <article class="covidinfo">
+        <h1>Covid-19</h1>
+        <h2>- Hjälp oss att hålla en trygg miljö för alla</h2>
+        <ul>
+          <li>Ät och drick vid bordet</li>
+          <li>Tvätta händerna</li>
+          <li>Hosta och nys i armvecket</li>
+          <li>Stanna hemma om du inte är friska</li>
+        </ul>
+        <p>
+          Vi har ett begränsat antal platser för att kunna följa
+          folkhälsomyndighetens restriktioner. Om du vill besöka oss men slippa
+          trängas, se vårt <b>diagram</b> och kom under våra lite lugnare ö
+          ppettider
+        </p>
+      </article>
+      <div class="chart">
+        <canvas id="myChart"></canvas>
+      </div>
+      <aside class="imgoppettider"></aside>
+      <article class="oppettider">
+        <h1>Öppettider</h1>
+        <ol>
+          <li>måndag till fredag: 09:00 - 20:00</li>
+          <li>helg: 10:00 - 21:00</li>
+        </ol>
+        <h2>Kontakta oss</h2>
+        <form action="" id="myform">
+          <label for="firstname">Förnamn *</label><br />
+          <input type="text" id="firstname" required /><br />
+          <label for="lastname">Efternamn *</label><br />
+          <input type="text" id="lastname" required /><br />
+          <label for="mail">Mailadress *</label><br />
+          <input type="email" id="mail" required /><br />
+          <label for="stad">Hemort</label> <br />
+          <select name="Stad" id="stad" class="stad">
+            <option value=""></option>
+            <option value="Other">Other</option>
+          </select>
+          <br />
+          <input type="checkbox" id="change" />
+          <label for="change" id="changelabel">Ändra</label><br />
+          <label for="changecity" id="changecitylabel">Ändra bostadsort</label
+          ><br />
+          <input type="text" id="changecity" />
+          <input type="submit" id="changesubmit" value="Ändra" />
+          <p id="updated">Uppdaterat!</p>
+          <label for="ifother" id="ifotherlabel">Bostadsort</label> <br />
+          <input type="text" id="ifother" /><br />
+          <textarea name="message" rows="10" cols="30" id="textarea">
+Meddelande</textarea
+          >
+          <br />
+          <input type="submit" id="submit" value="skicka" /><br />
+          <p id="greeting"></p>
+          <br />
+          <p id="please">
+            *Se till att alla fält är ifyllda för att skicka din
+            fråga/meddelande till oss
+          </p>
+        </form>
+      </article>
+    </main>
+    <!--footer-->
+    <footer class="footer">
+      <div class="footer-div">
+        <div id="footer-contact">
+          <p>
+            UPPSALA <br />
+            ymergatan 13B, 753 25 Uppsala<br />
+            Kakfabriken.uppsala@info.com <br />
+            070-4719664
+          </p>
+          <p>
+            STOCKHOLM <br />
+            annangata 13B, 111 22 Stockholm<br />
+            Kakfabriken.stockholm@info.com <br />
+            070-4719664
+          </p>
+        </div>
+        <div id="footer-logo">
+          <img src="bilder/logo1.png" alt="logo" />
+        </div>
+      </div>
+      <div id="all-rights">
+        <p>
+          ©Kakfabriken 2022. All Rights Reserved. Site design by @lisfredriksson
+        </p>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+    <script src="index2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </body>
+</html>

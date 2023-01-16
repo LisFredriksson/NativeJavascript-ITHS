@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Rubik:wght@600;700&display=swap');
+
+/*
+1. Root settings
+2. Body settings
+3. Button
+4. Navbar
+5. Hero section
+6. img-section
+7. slideshow section
+8. footer
+9. gridarea (Index2) (Innehåller chart och formulär mm)
+*/
+
+
+/*1. Root settings*/
+
+*{
+    font-family: Playfair display;
+    --one: #FA99EE;
+    --Two: #165E1B;
+    --three: #D1E1A5;
+    --four: #B5C6AC;
+    --five: #EFF1E6;
+    --white: #ffffff;
+    --black: #000000;
+
+}
+
+/*2. Body settings*/
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: var(--five);
+}
+
+/*3. Button*/
+
+.mybutton {
+    background-color: var(--Two);
+    border: none;
+    color: var(--white);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    padding: .75rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.mybutton:hover {
+  background-color: #37693a;
+}
+
+/*4. navbar*/
+
+.navbar {
+    display: flex;
+    position: absolute;
+    background-color: var(--four);
+    opacity: 1;
+    color: var(--black);
+    width: 100%;
+    height: 12vh;
+    z-index: 999;
+    align-items: center;
+    top: 0;
+    left: 0;
+    transition: 0.2s ease-in-out;
+    margin: auto;
+}
+
+.navbar div img{
+    height: 90px;
+}
+
+@media screen and (min-width: 381px) and (max-width: 550px) {
+    .navbar div img {
+        height: 8vh;
+    }
+}
+
+@media screen and (min-width: 374px) and  (max-width: 380px) {
+        .navbar div img {
+            height: 10vh;
+        }
+}
+
+@media screen and (max-width: 373px) {
+    .navbar div img {
+        height: 8vh;
+    }
+}
+
+.nav-links {
+    text-align: right;
+}
+
+.nav-links ul {
+    display: flex;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links ul li a {
+    padding: 0 6rem;
+    text-decoration-line: none ;
+    font-weight: bold;
+    color: var(--two);
+}
+
+.nav-links ul li a:hover{
+    text-decoration: underline;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 25px;
+  }
+
+  .toggle-button .mobileBar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--Two);
+    border-radius: 10%;
+  }
+
+  @media screen and (max-width: 500px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        margin-top: 52vh;
+        width: 100%;
+        height: 40vh;
+      }
+
+    .nav-links ul {
+        color: var(--white);
+        width: 100%;
+        flex-direction: column;
+        margin-top: 2.5rem;
+        row-gap: 2rem;
+      }
+    .nav-links ul li {
+        text-align: center;
+      }
+
+
+    .nav-links.active {
+        display: flex;
+        background-color: #165E1B;
+      }
+}
+
+/*5. hero section*/
+
+.hero-image {
+    height: 120vh;
+    background-position: center;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    color: var(--five);
+    position: absolute;
+    margin-top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+}
+
+.hero-text a {
+    text-decoration-line: none ;
+    font-weight: bold;
+    color: var(--two);
+    font-size: larger;
+}
+
+.hero-text a:hover{
+    color: var(--one);
+}
+
+#hero-logo {
+    height: 350px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 550px) {
+#hero-logo {
+    height: 150px;
+    margin-top: 50vh;
+}
+}
+
+.hero-image > img{
+    width: 100%;
+    height: 130vh;
+    margin-top: 12vh;
+    object-fit: cover;
+}
+
+/*6. img-section*/
+
+.img-section {
+    position: relative;
+    background-color: var(--four);
+}
+
+.lesspictures {
+    height: 130vh;
+}
+
+.morepictures {
+    height: 130vh;
+}
+
+@media screen and (min-width: 377px) and (max-width: 600px) {
+    .lesspictures {
+        height: 300vh;
+
+    }
+    .morepictures {
+        height: 200vh;
+
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 376px) {
+    .lesspictures {
+        height: 350vh;
+    }
+    .morepictures {
+        height: 250vh;
+    }
+
+
+}
+
+.img-section img {
+    object-fit: cover;
+    padding: 5rem 6rem;
+    height: 220px;
+    width: 220px;
+    border-radius: 30%;
+}
+
+@media screen and (min-width: 300px) and (max-width: 376px) {
+    .img-section img {
+        padding: 5rem 0;
+        margin-left: 80px;
+    }
+
+}
+
+@media screen and (min-width: 377px) and (max-width: 600px) {
+    .img-section img {
+        padding: 6rem 0;
+        margin-left: 100px;
+    }
+}
+
+.buttondiv {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    margin-bottom: 10px;
+    display: table;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .buttondiv {
+        left: 35%;
+    }
+
+}
+
+/*7. Slideshow section*/
+
+.slideshowsection {
+    height: 130vh;
+    color: var(--white);
+    background-color: var(--Two);
+    text-align: center;
+    padding: 40px;
+}
+
+#slideshow {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: auto;
+}
+
+.slidefade img {
+    width: 100%;
+}
+
+.slidefade {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: relative;
+    margin-top: 10%;
+    padding: 5rem;
+    color: var(--four);
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+  }
+
+  .prev:hover, .next:hover {
+    color: var(--one);
+  }
+
+  @media screen and (max-width: 600px) {
+    .slidefade img {
+        width: 320px;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    .slideshowsection {
+        height: 60vh;
+    }
+
+    .slideshowsection h2 {
+        font-size: 20px;
+    }
+
+  }
+
+/*8. footer*/
+
+.footer {
+    height: 80vh;
+    background-color: var(--one);
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-div {
+    height: 60vh;
+    flex: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+#footer-contact {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    flex: 100%;
+    text-align: left;
+}
+
+#footer-logo {
+    flex: 100%;
+}
+
+#footer-logo img {
+    height: 50%;
+    float: right;
+    margin-top: 3rem;
+}
+
+#all-rights {
+    height: 20vh;
+    flex: 10%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        height: 140vh;
+    }
+
+    .footer-div {
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    #footer-logo {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    #footer-logo img {
+        float: none;
+    }
+
+    #footer-contact {
+        text-align: center;
+        flex-grow: 3;
+    }
+
+    #all-rights {
+        height: 40vh;
+        padding: 3rem;
+    }
+
+}
+
+/*9. gridarea Index2*/
+
+.gridarea {
+    height: 240vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 14vh;
+    grid-template-areas:
+    "covidinfo chart"
+    "imgoppettider oppettider";
+}
+
+@media screen and (max-width: 600px) {
+    .gridarea {
+        height: auto;
+        grid-template-rows: 2fr 1fr 2fr 3fr;
+        grid-template-columns: 1fr ;
+        grid-template-areas:
+        "covidinfo"
+        "chart"
+        "imgoppettider"
+        "oppettider";
+}
+
+#myChart {
+    max-width: 280px;
+    height: auto;
+}
+}
+
+.covidinfo {
+    grid-area: covidinfo;
+    background-color: var(--four);
+    text-align: center;
+    padding: 2em;
+
+}
+
+.covidinfo ul li {
+    margin: 5px;
+    list-style: none;
+    font-weight: 600;
+}
+
+/*Öppettider*/
+
+.imgoppettider {
+    grid-area: imgoppettider;
+}
+
+.oppettider {
+    grid-area: oppettider;
+    text-align: center;
+    background-color: var(--Two);
+    color: var(--white);
+}
+
+
+.oppettider ol li {
+    padding: 5px;
+    list-style: none;
+    text-indent: -2em;
+}
+
+
+/*formulär*/
+
+ #ifother {
+    display: none;
+ }
+
+ #ifotherlabel {
+    display: none;
+ }
+ #myform label {
+    font-size: 14px;
+ }
+
+ #myform input {
+    margin-bottom: 10px;
+ }
+
+ #myform input:hover {
+    background-color: var(--five);
+    border-color: var(--five);
+ }
+
+#stad:hover {
+    background-color: var(--five);
+}
+
+#textarea:hover {
+    background-color: var(--five);
+}
+
+ #ifotherlabel {
+    margin-top: 5px;
+ }
+
+
+/*Chart*/
+
+.chart {
+    grid-area: chart;
+    align-items: center;
+    background-color: var(--four);
+}
+
+#myChart {
+    padding: 3rem 3rem;
+
+}
+
+#please {
+    color: red;
+}
+
+#changelabel {
+    font-size: 12px;
+}
+
+#changecity{
+    display: none;
+}
+
+#changecitylabel{
+    display: none;
+}
+
+#changesubmit {
+    display: none;
+}
+
+#updated {
+    display: none
+}
